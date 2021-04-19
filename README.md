@@ -25,9 +25,9 @@ A função de lista ainda não funciona, mas eu estou trabalhando para implement
 -   Responsividade
 -   Animações suaves
 
-## [](https://github.com/pmenta/netflix-clone/blob/master/github/desktop-behavior.gif?raw=true)Desktop Behavior
+## [](https://github.com/pmenta/netflix-clone/blob/master/github/modal-desktop-behavior.gif?raw=true)Desktop Behavior
 
-![enter image description here](https://github.com/pmenta/netflix-clone/blob/master/github/desktop-behavior.gif?raw=true)
+![enter image description here](https://github.com/pmenta/netflix-clone/blob/master/github/modal-desktop-behavior.gif?raw=true)
 
 ## [](https://github.com/pmenta/netflix-clone/blob/master/github/mobile-behavior.gif?raw=true)Mobile Behavior
 
