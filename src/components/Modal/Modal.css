@@ -1,0 +1,53 @@
+.overlay {
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.7);
+
+    position: fixed;
+    top: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    z-index: 999;
+}
+
+
+.modal--trailer {
+    text-align: center;
+}
+.trailer--block {
+    max-height: 325px;
+    width: 100%;
+    border-radius: 12px 12px 0px 0px;
+}
+
+.modal--content {
+    background-color: #181818;
+    width: 50%;
+    border-radius: 15px 15px 0px 0px;
+    position: fixed;
+    bottom: 0;
+}
+
+.info--name {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+.info--top {
+    padding: 15px 0px;
+}
+
+
+.modal--info {
+    display: flex;
+}
+.info--left {
+    padding: 30px 55px;
+}
+.info--right {
+    padding: 130px 55px 0px 0px;
+}

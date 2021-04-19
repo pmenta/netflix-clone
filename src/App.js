@@ -5,12 +5,16 @@ import Header from './components/Header/index.js'
 import MovieRow from './components/MovieRow/index.js'
 import Tmdb from './Tmdb'
 import FeaturedMovie from './components/FeaturedMovie/index.js'
+import Modal from './components/Modal/index.js'
 
 function App() {
 
   const [movieList, setMovieList] = useState([])
   const [featuredData, setFeatureData] = useState(null)
   const [blackHeader, setBlackHeader] = useState(false)
+  const [isModalVisible, setModalVisible] = useState(false)
+  const [modalData, setModalData] = useState({})
+
 
   useEffect(() => {
     const loadAll = async () => {
@@ -18,6 +22,8 @@ function App() {
 
       let list = Tmdb.getHomeList();
       setMovieList(await list)
+
+      console.log(await list)
 
       // Pegando o filme em destaque (featured)
 
@@ -31,15 +37,23 @@ function App() {
 
     }
     loadAll()
+
   }, [])
 
   useEffect(() => {
     const scrollListener = () => {
-      if (window.scrollY > 10) {
+ 
+      if (isModalVisible) {
+        setBlackHeader(false)
+      } else {
+        if (window.scrollY > 10) {
         setBlackHeader(true)
       } else {
         setBlackHeader(false)
       }
+      }
+
+      
     }
 
     window.addEventListener('scroll', scrollListener);
@@ -49,10 +63,12 @@ function App() {
     }
   })
 
-
-
   return (
     <div className='page'>
+
+      {isModalVisible &&
+              <Modal item={modalData} onClose={() => setModalVisible(false)}/>
+            }
 
       <Header black={blackHeader}></Header>
 
@@ -62,13 +78,15 @@ function App() {
 
       <section className='lists'>
         {movieList.map((item, key) => (
-          <MovieRow key={key} title={item.title} items={item.items} />
+          <MovieRow key={key} title={item.title} items={item.items} onOpen={() => setModalVisible(true)}
+          setData={(state) => {setModalData(state)}}/> 
         ))}
       </section>
       <footer>
+
         <p>Feito com <span role='img' aria-label='amor'>💖</span> por João Martins</p>
         <p>Direitos de imagem para Netflix</p>
-        <p className='last'>Dados fornecidos por <a href='https://www.themoviedb.org/'>TMDb</a> e <a href='https://www.traileraddict.com/'>TrailerAddict</a></p>
+        <p className='last'>Dados fornecidos por <a href='https://www.themoviedb.org/'>TMDb</a></p>
       </footer>
 
       {movieList.length <= 0 && 
