@@ -22,8 +22,8 @@ All data is provided by TMBd api.
 --  State manipulation
 --  Props
 -   Flexbox
--   Responsividade
--   Animações suaves
+-   Responsiveness
+-   Animations
 
 ## [](https://github.com/pmenta/netflix-clone/blob/master/github/modal-desktop-behavior.gif?raw=true)Desktop Behavior
 
