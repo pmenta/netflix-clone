@@ -3,11 +3,9 @@
 
 # Netflix Clone
 
-Olá, este é o meu primeiro projeto com React, acho que a melhor maneira da gente aprender algo é na pratica, então eu coloquei a mão no código!
+This was my first project with React!
 
-Todos os dados são fornecidos pela API do TMBd, é por causa dela que conseguimos ver as informações dos filmes/séries no modal e no item em destaque da tela.
-
-A função de lista ainda não funciona, mas eu estou trabalhando para implementar uma funcionalidade de login e a própria lista.
+All data is provided by TMBd api.
 
 ## Tecnologias
 
@@ -16,13 +14,14 @@ A função de lista ainda não funciona, mas eu estou trabalhando para implement
 - ![image](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
 - ![image](https://img.shields.io/badge/react%20-%2320232a.svg?&style=for-the-badge&logo=react&logoColor=%2361DAFB"/>)
 
-## O que consegui aprimorar?
+## What I've learned?
 
--   Conceitos básicos do React.js
---  Componentização com React
---  Manipulação de estados
+-   Basics React concepts
+--  React Hooks
+--  Componentization
+--  State manipulation
 --  Props
--   Conceitos de Flexbox
+-   Flexbox
 -   Responsividade
 -   Animações suaves
 
